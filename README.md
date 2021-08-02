@@ -36,8 +36,9 @@ Ps: Soon I will add the Ansible roles for threat detection.
 
 ![DevSecOps](images/00.png)
 
+![DevSecOps](images/01.png)
+
 ![DevSecOps](images/02.png)
 
 ![DevSecOps](images/03.png)
 
-![DevSecOps](images/04.png)
