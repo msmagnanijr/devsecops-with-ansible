@@ -1,0 +1,2 @@
+curl.exe -o C:\tmp\ConfigureRemotingForAnsible.ps1 https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
+powershell.exe -ExecutionPolicy Bypass -File C:\tmp\ConfigureRemotingForAnsible.ps1 -Force

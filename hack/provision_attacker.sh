@@ -1,0 +1,1 @@
+VAGRANT_VAGRANTFILE=../infra/Vagrantfile vagrant provision attacker

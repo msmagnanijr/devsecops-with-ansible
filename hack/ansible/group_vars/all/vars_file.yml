@@ -1,0 +1,8 @@
+# https://github.com/ansible/ansible/issues/54855
+ansible_python_interpreter: /usr/bin/python3
+
+# metasploit-framework
+lhost_ip: 10.0.0.190
+lhost_port: 1234
+output_file: malware.exe
+evil_output_file: evilputty.exe
